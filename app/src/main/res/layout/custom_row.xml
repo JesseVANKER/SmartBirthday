@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+ >
+
+    <data>
+        <variable
+            name="personne"
+            type="com.example.firstproject.model.Personne" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="278dp"
+        android:layout_height="363dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:alpha="0.5"
+        android:background="@drawable/rounded_card"
+        android:backgroundTint="#B3B1B1"
+        android:elevation="60dp">
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-12dp"
+            android:layout_marginBottom="16dp"
+            android:text="27 ans"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNom" />
+
+        <TextView
+            android:id="@+id/textViewNom"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="PRENOM"
+            android:textAlignment="textEnd"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="247dp"
+            android:layout_height="270dp"
+
+            android:layout_marginTop="8dp"
+            android:src="@drawable/avatarnopicture"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedEdge" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewNom"
+            app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
